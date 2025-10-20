@@ -19,5 +19,5 @@ export async function GET(request: NextRequest) {
     }
   }
   // redirect the user to an error page with some instructions
-  redirect('/auth/auth-code-error')
+  redirect('/error')
 }
