@@ -27,11 +27,11 @@ export async function middleware(request: NextRequest) {
     const publicRoutes = ['/sign-up', '/login', '/', '/auth/callback','/error']
     const isPublicRoute = publicRoutes.includes(pathname)
     // redirect to dashboard if you go to the base landing page but you are already logged in
-    if (isPublicRoute && user) {
-        const url = request.nextUrl.clone()
-        url.pathname = 'dashboard'
-        return NextResponse.redirect(url)
-    }
+    // if (isPublicRoute && user) {
+    //     const url = request.nextUrl.clone()
+    //     url.pathname = 'dashboard'
+    //     return NextResponse.redirect(url)
+    // }
     // if not on public route, redirect to sign in
 
     if (!isPublicRoute && !user) {
